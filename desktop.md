@@ -34,6 +34,9 @@
 7. PREMIUM DESKTOP UX & TITLE BAR:
    - **Custom Title Bar:** Always prefer **Custom Title Bars** over native OS frames to ensure a seamless, premium, and branded user experience.
    - **Window Controls:** The custom title bar MUST implement functional **Minimize**, **Maximize/Restore**, and **Close** buttons using the framework's native API (e.g., `window.minimize()`).
-   - **Draggable Region:** The title bar MUST be defined as a draggable region (e.g., `-webkit-app-region: drag` or framework equivalent) to allow users to move the window.
+   - **Draggable Region:** The title bar MUST be defined as a draggable region (e.g., `-webkit-app-region: drag` or `data-tauri-drag-region`) to allow users to move the window.
    - **Non-Draggable Controls:** All interactive elements within the title bar (buttons, menus, inputs) MUST be explicitly excluded from the draggable region (e.g., `no-drag`) to ensure they remain interactive.
-
+   - **Tauri-Specific Configuration:** When using **Tauri**, the AI MUST:
+     - Set `"decorations": false` in `tauri.conf.json` to enable frameless mode.
+     - Enable window APIs in the **Allowlist** (e.g., `"window": { "all": true }`) to allow JavaScript to control window states.
+     - Use the `data-tauri-drag-region` attribute on the HTML title bar element for native drag support.
