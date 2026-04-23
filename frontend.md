@@ -11,6 +11,7 @@
 3. INTERNATIONALIZATION (i18n):
    - STRICTLY FORBIDDEN to hardcode text strings directly in components/views (including placeholders, labels, error messages).
    - Must use the project's built-in i18n system (e.g., `t('key')`).
+   - **External YAML Files:** All translation keys and strings MUST be stored in external **YAML** files. STRICTLY FORBIDDEN to hardcode translations inside JSON or TypeScript files to maintain maximum readability for the user.
    - Default support: must include string definitions for at least two languages, Indonesian (id) and English (en).
    - Key naming: use a descriptive hierarchical format (e.g., `auth.login.title`), not raw text like `login_text`.
 

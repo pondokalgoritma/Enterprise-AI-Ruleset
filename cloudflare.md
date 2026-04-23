@@ -19,6 +19,7 @@
      - **User Confirmation:** Always ask the user to run the reset/seed command (e.g., `npx wrangler d1 execute ...`) after modifying the schema in the code.
    - **Batching:** Use D1's `.batch()` method for multiple SQL operations to minimize round-trips and optimize performance.
    - **KV Usage:** Use KV for read-heavy, low-latency data that doesn't require ACID transactions. Implement TTL (Time To Live) where appropriate to save storage.
+   - **Schema Workflow:** Adhere strictly to the **Schema-First Workflow** and **External Seeding** rules defined in `database.md` before initiating any D1 changes.
 
 5. PERFORMANCE & EDGE OPTIMIZATION:
    - **Lazy Loading:** Dynamically import heavy libraries only when needed to keep the Worker bundle size small.

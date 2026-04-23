@@ -35,3 +35,13 @@
    - **NO ALTER DURING DEVELOPMENT:** To maintain a clean and deterministic schema, using `ALTER TABLE` during the development phase is STRICTLY FORBIDDEN.
    - **RESET-FIRST APPROACH:** If the database structure needs to change, the existing database must be **RESET** (Dropped and Recreated) with the new schema.
    - **USER CONFIRMATION:** AI Agents MUST NOT perform a database reset automatically. Always ask the user to execute the reset/seed command (e.g., `npm run db:reset`) after a schema change is implemented in the source code.
+
+8. SCHEMA-FIRST WORKFLOW (MANDATORY):
+   - **Design Phase:** Before writing any implementation code or migration files, the AI MUST propose a complete and optimized database schema.
+   - **Detailed Documentation:** For every proposed table, the AI must explain its purpose, primary keys, relationships (Foreign Keys), and indexing strategy for high-performance queries.
+   - **Mandatory Approval:** The AI MUST explicitly ask for User Approval of the schema design. Implementation is STRICTLY FORBIDDEN until the user provides clear consent for the proposed structure.
+
+9. EXTERNAL SEEDING (MANDATORY):
+   - **No Hardcoded Data:** STRICTLY FORBIDDEN to hardcode seed data inside migration files, services, or repository logic.
+   - **External Files:** Seed data must be stored in external files (preferred format: **YAML** or **SQL**).
+   - **User Readability:** YAML is the preferred format for seed data to ensure it is easily readable and editable by the user without technical complexity.
