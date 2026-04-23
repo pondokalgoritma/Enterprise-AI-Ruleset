@@ -22,3 +22,8 @@
 5. LOGGING:
    - Log errors with sufficient context to aid debugging.
    - NEVER log sensitive data (PII, passwords, credentials).
+
+6. EXECUTION & REAL-TIME MONITORING:
+   - **Non-Blocking Logic:** Long-running or heavy computational tasks MUST NOT freeze the main thread (UI). Use multi-threading, Web Workers (frontend), or Background Jobs (backend/desktop) to ensure responsiveness.
+   - **Real-time Logging:** Implementation must support "Instant Feedback." Logs must be emitted immediately as a process starts, progresses, or completes.
+   - **Log Depth:** Real-time logs must include critical context: Timestamp, Process ID/Name, Status (Started/Progress/Done), and relevant metrics (e.g., memory usage or item count) to aid debugging.
