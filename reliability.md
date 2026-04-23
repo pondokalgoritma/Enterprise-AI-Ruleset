@@ -2,7 +2,9 @@
 
 1. INPUT VALIDATION & URL SAFETY:
    - Never trust user input. Always validate and sanitize.
-   - **No Hardcoded URLs:** STRICTLY FORBIDDEN to hardcode environment-specific URLs or local host addresses (e.g., `http://localhost:3000`). All API endpoints or external service URLs MUST be managed via environment variables to ensure production readiness.
+   - **No Hardcoded URLs:** STRICTLY FORBIDDEN to hardcode environment-specific URLs, local host addresses (e.g., `http://localhost:3000`), or external API strings directly in the logic.
+   - **Centralized Endpoint Management:** All external API URLs, third-party service base URLs, and static endpoints MUST be stored in a centralized configuration file (e.g., `endpoints.json` or `endpoints.yaml`).
+   - **Access Pattern:** AI MUST load these URLs from the centralized config or via a dedicated "Config Provider" instead of using raw strings in the codebase.
    - Use parameterized queries (prevent SQLi), sanitize outputs (prevent XSS), and implement CSRF protection.
 
 
