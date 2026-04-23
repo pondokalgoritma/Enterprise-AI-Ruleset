@@ -31,6 +31,7 @@ The framework is divided into 8 atomic markdown files, orchestrated by a central
 * **`desktop.md`** - Governs cross-platform compatibility, centralized binary sidecar storage, dynamic OS-aware path resolution, and responsive desktop windows.
 * **`mobile.md`** - Governs cross-platform mobile frameworks, native UX/gestures, memory optimization, offline-first states, and Just-In-Time permissions.
 * **`database.md`** - Optimizes database querying, index usage, cardinality, and strict avoidance of N+1 problems.
+* **`cloudflare.md`** - Governs Cloudflare-specific bindings (D1, KV, R2), Edge Runtime constraints, and automated migration systems.
 
 ## 🚀 How to Use
 Whenever you assign a task to the AI, instruct it to parse the rules in the exact order defined in `index.md`. 

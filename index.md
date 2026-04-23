@@ -15,6 +15,7 @@ LOAD ORDER:
 7. frontend.md (Frontend / UI tasks only)
 8. desktop.md (STRICT / Desktop Apps only)
 9. mobile.md (STRICT / Mobile Apps only)
+10. cloudflare.md (Cloudflare Native tasks only)
 
 GLOBAL PRINCIPLES:
 - Focus strictly on the user's task
