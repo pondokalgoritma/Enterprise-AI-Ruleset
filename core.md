@@ -27,12 +27,9 @@
      - **Why:** Brief rationale for the implementation strategy.
      - **How to Test:** Specific steps for the user to verify the changes work as intended.
 
-6. PROJECT CONTEXT & SPECIFICATION WORKFLOW:
-   - **Mandatory File:** Every project MUST have a standardized **`PROJECT.md`** file in the root directory.
-   - **Initial Setup:** If `PROJECT.md` is missing, the AI MUST proactively ask the user:
-     1. What is the project name and its primary purpose?
-     2. Who is the **Developer Name**?
-     3. What is the **Web Domain** and **Project URL** (for configs and SEO)?
-     4. What are the key features desired?
-   - **Specification Creation:** After receiving the information, the AI MUST create `PROJECT.md` with sections for: **Project Metadata** (Name, Developer, Domain, URL), Purpose, Feature List (with checkboxes), and an Implementation Roadmap.
-   - **Execution Alignment:** If `PROJECT.md` exists, the AI MUST read it first to understand current progress and strictly follow the roadmap to prevent hallucinations and maintain context.
+6. PROJECT CONTEXT & NAVIGATION WORKFLOW:
+   - **Mandatory Files:** Every project MUST have standardized **`PROJECT.md`** (Roadmap/Features) and **`ARCHITECTURE.md`** (Folder Map/Data Flow) files in the root.
+   - **Initial Setup:** If these files are missing, the AI MUST proactively ask for Project Metadata (Name, Purpose, Developer, Domain, URL) and Features to initialize them.
+   - **Search-First Policy:** In large codebases, the AI MUST use `grep` or `find` to locate specific logic instead of reading directories recursively to preserve context window and efficiency.
+   - **Navigation Map:** AI MUST update `ARCHITECTURE.md` whenever new domains or major architectural changes occur to ensure a clear "X-Ray" view of the project structure.
+   - **Execution Alignment:** AI MUST read these files first to understand the project's technical map and functional progress before writing any code.

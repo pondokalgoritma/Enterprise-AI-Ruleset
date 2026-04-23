@@ -63,3 +63,8 @@
 
 12. FRONTEND RESILIENCE:
    - **Error Boundaries:** Every major business domain or UI module MUST be wrapped in an **Error Boundary**. This ensures that a failure in one component does not crash the entire application, providing a more stable user experience.
+
+13. LARGE-SCALE ORGANIZATION (NAVIGABILITY):
+   - **Barrel Files (`index.ts`):** EVERY directory within a business domain MUST have an `index.ts` file. This file acts as a gatekeeper, exporting only the public API of that directory. AI can read this file to understand the folder's capabilities without opening every sub-file.
+   - **Domain Manifests (`README.md`):** Every major domain folder (e.g., `src/modules/auth`) MUST contain a brief `README.md` explaining its purpose, core logic, and file structure.
+   - **Encapsulation:** Internal logic (private helpers) MUST NOT be exported through barrel files. Only public interfaces, classes, or functions are allowed.
