@@ -40,6 +40,7 @@
    - **Design Phase:** Before writing any implementation code or migration files, the AI MUST propose a complete and optimized database schema.
    - **Detailed Documentation:** For every proposed table, the AI must explain its purpose, primary keys, relationships (Foreign Keys), and indexing strategy for high-performance queries.
    - **Mandatory Approval:** The AI MUST explicitly ask for User Approval of the schema design. Implementation is STRICTLY FORBIDDEN until the user provides clear consent for the proposed structure.
+   - **Schema-Validation Sync:** Any change to the database schema MUST be immediately followed by a synchronized update of all related **Validation Schemas** (e.g., Zod, Valibot, or Joi) to prevent data drift and runtime errors.
 
 9. EXTERNAL SEEDING (MANDATORY):
    - **No Hardcoded Data:** STRICTLY FORBIDDEN to hardcode seed data inside migration files, services, or repository logic.

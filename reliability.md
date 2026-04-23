@@ -39,6 +39,7 @@
 
 8. STABILITY & INTEGRITY:
    - **Idempotency & Double Submit:** For state-changing operations (Create/Update/Delete), implement UI protections (e.g., disabling buttons after the first click) and backend checks to prevent duplicate actions from multiple submissions.
+   - **Environment Prefixing:** AI MUST ensure all environment variables used in the frontend/client-side follow framework-specific prefixing rules (e.g., `NEXT_PUBLIC_` for Next.js, `VITE_` for Vite) to ensure they are accessible in the browser.
    - **Environment Validation:** Critically important environment variables (defined in `.env` or bindings) MUST be validated during application startup. The app should fail fast and log clear errors if a required secret or configuration is missing.
    - **Idempotent Operations:** All maintenance scripts, migrations, seeds, and background jobs MUST be **Idempotent**. Executing the same operation multiple times must yield the same state without causing errors or data duplication.
 
