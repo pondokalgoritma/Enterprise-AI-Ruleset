@@ -89,3 +89,12 @@
 
 
 
+
+16. SEO & SEARCH ENGINE OPTIMIZATION (MANDATORY):
+    - **Semantic Foundation:** STRICTLY FORBIDDEN to use "Div-Soup." AI MUST use appropriate semantic tags (<header>, <main>, <footer>, <nav>, <article>, <section>) to define the document structure, which is vital for search engine crawlers.
+    - **Automated Metadata:** Every unique view/page MUST have its own unique <title> (max 60 chars) and <meta name="description"> (max 160 chars) that accurately describes the content.
+    - **Heading Hierarchy:** AI MUST ensure only ONE <h1> exists per page, acting as the primary topic. Subheadings MUST follow a logical hierarchy (H1 -> H2 -> H3) without skipping levels.
+    - **Social Media Readiness (OpenGraph):** Every project MUST include essential OpenGraph (og:) and Twitter Card meta tags, including a mandatory og:image for professional link previews.
+    - **Alt-Text Discipline:** Every <img> tag MUST include a descriptive alt attribute. STRICTLY FORBIDDEN to use generic text like "image" or "placeholder"; use context-rich descriptions for accessibility and image SEO.
+    - **Structured Data (JSON-LD):** For primary content types (e.g., Articles, Products, FAQ), the AI MUST automatically generate or recommend JSON-LD Structured Data (Schema.org) to enable rich snippets in search results.
+    - **Visual Stability (CLS Prevention):** Every image MUST have explicit width and height attributes (or aspect-ratio styles) to prevent Layout Shifts, which negatively impact SEO rankings.
