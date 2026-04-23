@@ -26,8 +26,10 @@
 
 5. STYLING & TAILWIND CSS:
    - Mandatory use of **Tailwind CSS** for all UI styling across both Web and Desktop applications.
+   - **Subtle Border Radii:** Avoid excessive rounding (e.g., `rounded-2xl`, `rounded-full`) for main UI components like Cards, Inputs, and Modals. Use subtle, sharp-but-elegant radii (e.g., `rounded-md` or `rounded-lg`) to maintain a professional, high-end aesthetic.
    - STRICTLY FORBIDDEN to write custom raw CSS files unless dealing with complex, highly specific animations or edge cases that Tailwind cannot handle natively.
    - Utilize Tailwind's built-in responsive utility classes (e.g., `sm:`, `md:`, `lg:`) to easily implement the Mobile-First approach.
+
 
 6. DUAL THEME SUPPORT (DARK/LIGHT):
    - **Theme-Aware Components:** EVERY custom component MUST be fully responsive to theme changes.
