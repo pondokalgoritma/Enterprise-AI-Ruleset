@@ -1,8 +1,10 @@
 # FRONTEND & UI RULES (FRONTEND TASKS)
 
-1. CUSTOM COMPONENTS ONLY:
-   - STRICTLY FORBIDDEN to use native browser popups (`alert()`, `confirm()`, `prompt()`).
-   - Must use custom components (Modal, Toast, Dialog) that align with the application's theme/design system.
+1. ATOMIC & REUSABLE CUSTOM COMPONENTS:
+   - **STRICTLY FORBIDDEN** to use native browser popups (`alert()`, `confirm()`, `prompt()`) or generic, unstyled native HTML elements (e.g., raw `<button>`, `<input>`, `<select>`) directly in views.
+   - **Custom UI Library:** All UI elements MUST be abstracted into a dedicated, centralized component folder (e.g., `src/components/ui`).
+   - **Reusability & Consistency:** Every UI element must be highly reusable, modular, and strictly follow a uniform design language (consistent typography, padding, borders, and shadows) throughout the entire application.
+
 
 2. ACCESSIBILITY (A11Y) & UX:
    - Custom modals must support keyboard navigation (e.g., ESC to close, focus traps).
