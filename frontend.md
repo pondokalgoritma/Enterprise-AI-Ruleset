@@ -78,6 +78,7 @@
    - **Modern Option Selection:** Favor **Toggle Buttons** (Segmented Controls) for selecting options instead of raw, unstyled radio buttons or checkboxes to maintain a premium UI feel.
 
 15. PREMIUM AESTHETICS (VISUAL EXCELLENCE):
+   - **Design Skills Mandate:** AI MUST utilize the `ui-ux-designer` and `design-md` skills when creating new layouts or complex components to ensure high-end, premium aesthetics.
    - **Glassmorphism:** Use `backdrop-filter: blur()` and semi-transparent backgrounds for overlays, floating headers, and modals to create a high-end "frosted glass" effect.
    - **Subtle Layered Shadows:** Use multi-layered box-shadows (diffused shadows) instead of single-layer ones to create a natural, organic sense of depth and elevation.
    - **Organic Animations:** Implement **Spring Physics** (e.g., Framer Motion spring) for transitions and hover effects to make the UI feel alive and responsive.

@@ -13,6 +13,7 @@
    - Test function names must be highly descriptive, explaining the scenario being tested and the expected outcome.
 
 4. TEST-DRIVEN DEVELOPMENT (TDD) WORKFLOW:
+   - **TDD Skill Mandate:** AI MUST explicitly use the `test-driven-development` and `unit-testing-test-generate` skills when implementing new features or bugfixes to enforce the RED-GREEN-REFACTOR cycle.
    - **Red-Green-Refactor:** For every new feature or bug fix, follow the TDD cycle:
      1. **RED:** Write a failing test that defines the expected behavior.
      2. **GREEN:** Write the minimal code to pass the test.

@@ -17,6 +17,7 @@
      - **Security Auditing:** Log all authorization failures (403 Forbidden) and sensitive administrative actions for security audits.
 
 3. ERROR HANDLING (FAIL GRACEFULLY):
+   - **Systematic Debugging:** When encountering an error, test failure, or unexpected behavior, the AI MUST explicitly invoke the `systematic-debugging` skill to find the root cause BEFORE proposing a fix. No blind guessing.
    - The application must not crash silently. Catch exceptions (try-catch or error boundaries).
    - Provide *user-friendly* error messages to the client; never expose raw stack traces to the UI.
 
