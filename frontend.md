@@ -44,7 +44,7 @@
 8. USER FEEDBACK & LAYERING:
    - **Skeleton Loading:** For a premium experience, favor **Skeleton Screens** (pulsing shadows) over generic spinners or "Loading..." text during data fetching.
    - **Micro-interactions:** Implement subtle animations and transitions (hover scales, smooth fades, focus rings) for all interactive elements to make the UI feel responsive and "alive".
-   - **Z-Index Layering System:** Avoid arbitrary or extreme values (e.g., `z-[9999]`). Use a structured, tiered scale (e.g., Modals: `z-50`, Overlays: `z-40`, Navigation: `z-30`, Dropdowns: `z-20`) to maintain a predictable visual order.
+   - **Z-Index Layering System:** Avoid arbitrary or extreme values (e.g., `z-[9999]`). Use a structured, tiered scale (e.g., Toasts/Notifications: `z-60`, Modals: `z-50`, Overlays: `z-40`, Navigation: `z-30`, Dropdowns: `z-20`) to maintain a predictable visual order. Toasts MUST always be the topmost layer.
 
 9. ADVANCED FRONTEND PATTERNS:
    - **Race Condition Handling:** When performing multiple asynchronous requests for the same state (e.g., search-as-you-type), always use an `AbortController` to cancel previous pending requests and prevent outdated data from overwriting new results.
