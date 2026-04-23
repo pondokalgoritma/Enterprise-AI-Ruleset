@@ -50,3 +50,11 @@
    - **TSDoc/JSDoc:** Every exported function, class, interface, or complex logic block MUST include **TSDoc/JSDoc** comments clearly explaining the purpose, parameters, and return values to ensure long-term maintainability.
 
 
+12. FILE HYGIENE & IMPORT ORGANIZATION:
+   - **Organized Imports:** Imports MUST be grouped and sorted logically:
+     1. Built-in modules (e.g., `fs`, `path`).
+     2. External libraries (e.g., `react`, `lodash`).
+     3. Internal project aliases (e.g., `@/components`, `@/utils`).
+     4. Relative path imports (e.g., `./styles.css`).
+   - **No Dead Code:** STRICTLY FORBIDDEN to leave unused imports, variables, or commented-out code blocks in production-ready files.
+   - **EOF Newline:** Always ensure files end with a single newline character to maintain POSIX compatibility.

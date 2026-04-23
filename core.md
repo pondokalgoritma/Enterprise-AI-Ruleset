@@ -23,6 +23,7 @@
 
 5. NO PLACEHOLDERS & COMMIT STANDARDS:
    - **Fully Functional:** STRICTLY FORBIDDEN to use placeholders, `// TODO` comments, or incomplete logic. Every line of code must be fully functional and integrated.
+   - **Atomic Commits:** AI MUST NOT combine multiple unrelated changes or features in a single commit. Each commit MUST represent one logical, atomic change to facilitate easy reverts and clear history.
    - **Conventional Commits:** All git commits MUST follow the **Conventional Commits** specification (e.g., `feat:`, `fix:`, `chore:`, `refactor:`, `docs:`).
    - **Handover Summary:** Upon task completion, the AI MUST provide a concise summary including:
      - **What Changed:** A clear list of modifications and new files.
@@ -31,7 +32,9 @@
 
 6. PROJECT CONTEXT & NAVIGATION WORKFLOW:
    - **Mandatory Files:** Every project MUST have standardized **`README.md`** (Public Setup), **`PROJECT.md`** (Roadmap), **`ARCHITECTURE.md`** (Technical Map), **`TROUBLESHOOTING.md`** (Error Log), and **`.gitignore`** files in the root.
+   - **Environment Sync:** AI MUST automatically update **`.env.example`** whenever a new environment variable is introduced in the local `.env` file to ensure setup reproducibility.
    - **Security First:** AI MUST ensure a robust **`.gitignore`** exists and covers sensitive files (e.g., `.env`, `node_modules`, `dist`, `build`) before performing the first commit.
+
    - **Initial Setup:** If these files are missing, the AI MUST proactively ask for Project Metadata (Name, Purpose, Developer, Domain, URL) and Features to initialize them.
    - **Search-First Policy:** In large codebases, the AI MUST use `grep` or `find` to locate specific logic instead of reading directories recursively to preserve context window and efficiency.
    - **Navigation Map:** AI MUST update `ARCHITECTURE.md` whenever new domains or major architectural changes occur to ensure a clear "X-Ray" view of the project structure.
