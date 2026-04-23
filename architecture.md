@@ -68,7 +68,3 @@
    - **Barrel Files (`index.ts`):** EVERY directory within a business domain MUST have an `index.ts` file. This file acts as a gatekeeper, exporting only the public API of that directory. AI can read this file to understand the folder's capabilities without opening every sub-file.
    - **Domain Manifests (`README.md`):** Every major domain folder (e.g., `src/modules/auth`) MUST contain a brief `README.md` explaining its purpose, core logic, and file structure.
    - **Encapsulation:** Internal logic (private helpers) MUST NOT be exported through barrel files. Only public interfaces, classes, or functions are allowed.
-
-14. DATA FETCHING & N+1 PREVENTION:
-   - **Performance First:** AI MUST proactively check for and prevent **N+1 query patterns** in all data fetching logic.
-   - **Optimization:** Always prefer Eager Loading, Joins, or batching techniques to fetch related data in a single operation rather than performing individual queries inside a loop.

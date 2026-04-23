@@ -45,3 +45,9 @@
    - **No Hardcoded Data:** STRICTLY FORBIDDEN to hardcode seed data inside migration files, services, or repository logic.
    - **External Files:** Seed data must be stored in external files (preferred format: **YAML** or **SQL**).
    - **User Readability:** YAML is the preferred format for seed data to ensure it is easily readable and editable by the user without technical complexity.
+
+10. QUERY PERFORMANCE & N+1 PREVENTION:
+   - **Performance First:** AI MUST proactively check for and prevent **N+1 query patterns** in all data fetching logic.
+   - **Strict Fetching Strategy:** Always prefer **Eager Loading**, **Joins**, or **Batching** techniques to fetch related data in a single operation. Performing individual database queries inside a loop is STRICTLY FORBIDDEN.
+   - **Indexing Strategy:** Every table MUST have an indexing strategy designed for its most frequent query patterns. All Foreign Keys and high-cardinality search columns MUST be indexed.
+   - **Large Dataset Pagination:** For list/collection endpoints, AI MUST implement **Offset** or **Cursor-based** pagination to prevent OOM (Out of Memory) and database performance degradation.
