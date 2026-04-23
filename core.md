@@ -32,7 +32,8 @@
      - **How to Test:** Specific steps for the user to verify the changes work as intended.
 
 6. PROJECT CONTEXT & NAVIGATION WORKFLOW:
-   - **Mandatory Files:** Every project MUST have standardized **`PROJECT.md`** (Roadmap), **`ARCHITECTURE.md`** (Technical Map), and **`TROUBLESHOOTING.md`** (Error/Solution Log) files in the root.
+   - **Mandatory Files:** Every project MUST have standardized **`README.md`** (Public Setup/Usage), **`PROJECT.md`** (Internal Roadmap), **`ARCHITECTURE.md`** (Technical Map), and **`TROUBLESHOOTING.md`** (Error Log) files in the root.
+
    - **Initial Setup:** If these files are missing, the AI MUST proactively ask for Project Metadata (Name, Purpose, Developer, Domain, URL) and Features to initialize them.
    - **Search-First Policy:** In large codebases, the AI MUST use `grep` or `find` to locate specific logic instead of reading directories recursively to preserve context window and efficiency.
    - **Navigation Map:** AI MUST update `ARCHITECTURE.md` whenever new domains or major architectural changes occur to ensure a clear "X-Ray" view of the project structure.
