@@ -38,7 +38,7 @@
    - **Environment Sync:** AI MUST automatically update **`.env.example`** whenever a new environment variable is introduced in the local `.env` file to ensure setup reproducibility.
    - **Security First:** AI MUST ensure a robust **`.gitignore`** exists and covers sensitive files (e.g., `.env`, `node_modules`, `dist`, `build`) before performing the first commit.
 
-   - **Initial Setup:** If these files are missing, the AI MUST proactively ask for Project Metadata (Name, Purpose, Developer, Domain, URL) and Features to initialize them.
+   - **Initial Setup:** If `PROJECT.md` is missing, the AI MUST proactively use `PROJECT_TEMPLATE.md` from the ruleset to ask for Project Metadata (Name, Purpose, Technical Stack, Constraints) and initialize it. This file serves as the primary anti-hallucination guardrail and technical source of truth.
    - **Search-First Policy:** In large codebases, the AI MUST use `grep` or `find` to locate specific logic instead of reading directories recursively to preserve context window and efficiency.
    - **Navigation Map:** AI MUST update `ARCHITECTURE.md` whenever new domains or major architectural changes occur to ensure a clear "X-Ray" view of the project structure.
    - **Execution Alignment:** AI MUST read these files first to understand the project's technical map, functional progress, and past troubleshooting lessons before writing any code.
@@ -61,3 +61,9 @@
    - **Legacy-to-New Mapping:** During refactoring, the AI MUST provide a clear mapping in the task summary of what has been moved, renamed, or replaced to ensure the developer doesn't lose context.
    - **Config Visibility:** Any modification to critical configuration files (e.g., `tsconfig.json`, `package.json`, `tauri.conf.json`) MUST be explicitly highlighted in the handover summary.
    - **No "Magic" Without Disclosure:** If the AI utilizes complex or non-obvious framework features (e.g., obscure hooks, native bindings, or custom compilers), it MUST provide a brief "Developer Note" explaining how it works.
+
+10. PLAN-FIRST WORKFLOW (ANTI-CHAOS):
+    - **Mandatory Planning:** For any task involving more than one file change, new feature implementation, or complex logic, the AI MUST use the `plan-writing` skill (or equivalent structured planning) before writing any code.
+    - **Wait for Approval:** The generated plan MUST be presented to the user for review. AI MUST NOT proceed to implementation until the user provides explicit approval or feedback on the plan.
+    - **Atomic Execution:** Plans must break down work into small, verifiable steps. Each step should be completed and verified before moving to the next to prevent compound errors.
+    - **Refinement Loop:** If a plan is rejected or needs adjustment, the AI MUST refine the plan and present it again, ensuring all user concerns are addressed in the logic flow.

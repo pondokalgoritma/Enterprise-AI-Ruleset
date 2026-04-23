@@ -17,6 +17,7 @@ The framework is divided into atomic markdown files, orchestrated by a central `
 ### 1. The Core
 * **`index.md`** - The entry point. Dictates the load order and defines the agent's operating mode (FAST, SAFE, STRICT).
 * **`core.md`** - General rules of engagement: Focus strictly on the task, no assumptions, and work incrementally.
+* **`PROJECT_TEMPLATE.md`** - The definitive metadata template for preventing AI hallucinations and setting technical guardrails.
 
 ### 2. Engineering Standards
 * **`coding-standards.md`** - Enforces atomic file sizes, explicit type safety (TypeScript/Type Hints), descriptive naming, and Conventional Commits.
@@ -48,7 +49,7 @@ I am starting a new project. Read 'index.md' and follow the 'CORE OPERATIONAL RU
 in 'core.md' to initiate the project. 
 
 1. Perform a Pre-flight Check.
-2. Ask me for the required Project Metadata (Name, Purpose, Domain, URL).
+2. Ask me for the required Project Metadata based on `PROJECT_TEMPLATE.md`.
 3. Initialize the mandatory project files (README.md, PROJECT.md, ARCHITECTURE.md, .gitignore).
 ```
 
