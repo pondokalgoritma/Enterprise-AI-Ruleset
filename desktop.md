@@ -30,3 +30,10 @@
    - Desktop applications must support both **Dark** and **Light** themes.
    - UI components must respond to the system-level theme change automatically.
    - Ensure high contrast and accessibility standards are met in both themes.
+
+7. PREMIUM DESKTOP UX & TITLE BAR:
+   - **Custom Title Bar:** Always prefer **Custom Title Bars** over native OS frames to ensure a seamless, premium, and branded user experience.
+   - **Window Controls:** The custom title bar MUST implement functional **Minimize**, **Maximize/Restore**, and **Close** buttons using the framework's native API (e.g., `window.minimize()`).
+   - **Draggable Region:** The title bar MUST be defined as a draggable region (e.g., `-webkit-app-region: drag` or framework equivalent) to allow users to move the window.
+   - **Non-Draggable Controls:** All interactive elements within the title bar (buttons, menus, inputs) MUST be explicitly excluded from the draggable region (e.g., `no-drag`) to ensure they remain interactive.
+
