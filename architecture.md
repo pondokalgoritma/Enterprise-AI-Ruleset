@@ -20,6 +20,10 @@
      2. **Business / Service Layer (Services/Use Cases):** The core of the application holding business logic. This layer must remain unaware of HTTP/Web concerns.
      3. **Data Access / Persistence Layer (Repositories/DAOs):** The ONLY place allowed to execute DB queries or call third-party APIs.
    - **Strict Communication Rule:** Higher layers may ONLY call the layer directly below them (Controller -> Service -> Repository). Lower layers are STRICTLY FORBIDDEN from calling or depending on layers above them (Dependency Rule).
+   - **Authorization Placement (RBAC):**
+     - **Presentation Layer:** Perform initial "Guard" checks (e.g., check if the user is authenticated and has the basic role required to access the route).
+     - **Business Layer (Service):** Perform deep authorization checks (e.g., ownership validation, complex business-rule-based permissions).
+     - **Data Layer:** MUST NOT contain authorization logic. It only handles data retrieval/persistence as instructed by the Service Layer.
 
 5. CLEAN CODE PRACTICES:
    - Remove *dead code*, commented-out code, *unused imports*, and empty functions.

@@ -6,7 +6,11 @@
 
 2. SENSITIVE DATA & AUTH:
    - STRICTLY FORBIDDEN to hardcode secrets, API keys, or passwords. Always use `.env`.
-   - Implement *Least Privilege* and ensure strict endpoint authorization checks.
+   - Implement *Least Privilege* through Role-Based Access Control (RBAC):
+     - **Centralized Definition:** Roles and permissions must be defined in a single source of truth (e.g., a constants file or database schema). Avoid hardcoded strings across the codebase.
+     - **Permission-Based Access:** Prefer checking for specific permissions (e.g., `can_edit_post`) rather than checking for raw role names (e.g., `is_admin`) to ensure future flexibility.
+     - **Resource Ownership:** Beyond roles, always validate data ownership (e.g., a user can only update their own profile/records) within the Service Layer.
+     - **Security Auditing:** Log all authorization failures (403 Forbidden) and sensitive administrative actions for security audits.
 
 3. ERROR HANDLING (FAIL GRACEFULLY):
    - The application must not crash silently. Catch exceptions (try-catch or error boundaries).
