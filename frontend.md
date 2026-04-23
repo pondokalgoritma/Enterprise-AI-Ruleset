@@ -39,7 +39,8 @@
    - Consistency: Ensure all icons used within the same application follow a uniform stroke weight, style (e.g., all outlined or all filled), and sizing pattern.
 
 8. USER FEEDBACK & LAYERING:
-   - **Loading & Empty States:** Every data-fetching component MUST handle and display a distinct "Loading" state and an "Empty" state (when no data is returned). STRICTLY FORBIDDEN to show blank screens during background processes.
+   - **Skeleton Loading:** For a premium experience, favor **Skeleton Screens** (pulsing shadows) over generic spinners or "Loading..." text during data fetching.
+   - **Micro-interactions:** Implement subtle animations and transitions (hover scales, smooth fades, focus rings) for all interactive elements to make the UI feel responsive and "alive".
    - **Z-Index Layering System:** Avoid arbitrary or extreme values (e.g., `z-[9999]`). Use a structured, tiered scale (e.g., Modals: `z-50`, Overlays: `z-40`, Navigation: `z-30`, Dropdowns: `z-20`) to maintain a predictable visual order.
 
 9. ADVANCED FRONTEND PATTERNS:
@@ -55,4 +56,9 @@
 11. DEPENDENCY ISOLATION (NO EXTERNAL CDNs):
    - **Local Bundling:** STRICTLY FORBIDDEN to load libraries, scripts, or styles via external CDNs (e.g., `<script src="https://cdn...">`). 
    - **Self-Hosted:** All dependencies MUST be installed via a Package Manager (npm/yarn/pnpm) and bundled locally to ensure security (XSS prevention), privacy, and offline reliability.
+
+12. STRICT FORM MANAGEMENT & VALIDATION:
+   - **Schema-Based Validation:** MANDATORY use of schema validation libraries (e.g., **Zod**, **Valibot**) for all forms to ensure data integrity.
+   - **No Manual Validation:** STRICTLY FORBIDDEN to write ad-hoc, manual validation logic inside components. All rules MUST be defined in centralized, reusable schemas.
+
 

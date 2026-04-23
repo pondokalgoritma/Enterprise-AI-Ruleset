@@ -58,3 +58,6 @@
    - **Object-Oriented Programming (OOP):** Favor OOP patterns (Classes, Inheritance, Polymorphism, Encapsulation) for complex logic to improve reusability and maintainability.
    - **Domain-Based Grouping:** Organize the codebase by **Business Domain** (e.g., `src/modules/auth`, `src/modules/billing`, `src/modules/users`) rather than technical type (e.g., all controllers in one folder).
    - **Reusability:** Design modules and components to be highly reusable and independent. Business logic MUST be decoupled from specific transport layers (API/CLI/Web) or storage engines.
+
+12. FRONTEND RESILIENCE:
+   - **Error Boundaries:** Every major business domain or UI module MUST be wrapped in an **Error Boundary**. This ensures that a failure in one component does not crash the entire application, providing a more stable user experience.
