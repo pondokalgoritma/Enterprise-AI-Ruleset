@@ -13,3 +13,8 @@
    - Always leave the code cleaner than you found it. 
    - **Refactor proactively:** If a file or function is already too complex (exceeding length limits) or contains tech debt, refactor it before adding new features. 
    - Small improvements (e.g., better naming, removing dead code) should be made during every task without explicitly being asked.
+
+4. SELF-VERIFICATION (THE FINAL CHECK):
+   - Before declaring a task "DONE," the AI MUST perform a critical self-review of the code.
+   - **Mandatory Checks:** Scan for typos, verify logic against edge cases, check for linting errors, and confirm that ALL user requirements have been fully addressed.
+   - **Build Validation:** Whenever possible, run the project's `lint`, `test`, or `build` commands to ensure no regressions or syntax errors were introduced during the process.
