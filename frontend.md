@@ -71,5 +71,17 @@
 
    - **Professional Branding:** Every project MUST include a custom Favicon and full Social Media (OpenGraph/SEO) metadata to ensure a professional appearance when shared.
 
+14. CORE COMPONENT STANDARDS:
+   - **Rich Inputs:** EVERY custom input component MUST support optional **Icon Prefix** and **Icon Suffix** slots/props for enhanced functionality.
+   - **Hybrid Dropdowns:** Custom Select/Dropdown components MUST natively support both **Single** and **Multiple** selection modes with a consistent visual style (e.g., using chips/tags for multiple items).
+   - **Modern Option Selection:** Favor **Toggle Buttons** (Segmented Controls) for selecting options instead of raw, unstyled radio buttons or checkboxes to maintain a premium UI feel.
+
+15. PREMIUM AESTHETICS (VISUAL EXCELLENCE):
+   - **Glassmorphism:** Use `backdrop-filter: blur()` and semi-transparent backgrounds for overlays, floating headers, and modals to create a high-end "frosted glass" effect.
+   - **Subtle Layered Shadows:** Use multi-layered box-shadows (diffused shadows) instead of single-layer ones to create a natural, organic sense of depth and elevation.
+   - **Organic Animations:** Implement **Spring Physics** (e.g., Framer Motion spring) for transitions and hover effects to make the UI feel alive and responsive.
+   - **Glow Borders & Soft Gradients:** Apply very subtle gradients and high-contrast "glow" borders (0.5px to 1px) to UI cards and containers for a sleek, modern finish.
+
+
 
 
