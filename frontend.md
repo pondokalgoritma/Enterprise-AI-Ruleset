@@ -9,8 +9,10 @@
 
 
 2. ACCESSIBILITY (A11Y) & UX:
+   - **Resilience (Error Boundaries):** Every major UI module (e.g., Sidebar, Main Layout, Dashboard Widgets) MUST be wrapped in an **Error Boundary** to prevent a single component failure from crashing the entire application.
    - Custom modals must support keyboard navigation (e.g., ESC to close, focus traps).
    - Transition animations must be smooth but efficient to avoid rendering performance issues.
+
 
 3. INTERNATIONALIZATION (i18n):
    - STRICTLY FORBIDDEN to hardcode text strings directly in components/views (including placeholders, labels, error messages).

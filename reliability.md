@@ -1,8 +1,10 @@
 # RELIABILITY & SECURITY RULES (ALWAYS ACTIVE)
 
-1. INPUT VALIDATION & VULNERABILITIES:
+1. INPUT VALIDATION & URL SAFETY:
    - Never trust user input. Always validate and sanitize.
+   - **No Hardcoded URLs:** STRICTLY FORBIDDEN to hardcode environment-specific URLs or local host addresses (e.g., `http://localhost:3000`). All API endpoints or external service URLs MUST be managed via environment variables to ensure production readiness.
    - Use parameterized queries (prevent SQLi), sanitize outputs (prevent XSS), and implement CSRF protection.
+
 
 2. SENSITIVE DATA & AUTH:
    - STRICTLY FORBIDDEN to hardcode secrets, API keys, or passwords. Always use `.env`.
@@ -40,7 +42,8 @@
    - **Idempotent Operations:** All maintenance scripts, migrations, seeds, and background jobs MUST be **Idempotent**. Executing the same operation multiple times must yield the same state without causing errors or data duplication.
 
 9. SILENT FAILURE PREVENTION:
-   - **Timezone Consistency:** All timestamps MUST be stored and processed in **UTC (ISO 8601)**. Conversion to local timezones should ONLY happen at the Presentation Layer (UI) for display purposes.
+   - **Strict UTC Policy:** All timestamps MUST be stored, transmitted, and processed in **UTC (ISO 8601)**. Conversion to local timezones should ONLY happen at the Presentation Layer (UI) for display purposes.
+
    - **Streaming for Large Data:** STRICTLY FORBIDDEN to read entire large files or datasets into memory. Use **Streams** (ReadableStream/WritableStream) for processing to keep memory usage constant and prevent OOM (Out of Memory) crashes.
    - **Rate Limit Handling:** When calling external APIs, implement **Exponential Backoff** and retry mechanisms to gracefully handle `429 Too Many Requests` or transient network errors.
 
