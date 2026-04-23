@@ -14,6 +14,7 @@ LOAD ORDER:
 6. testing.md (STRICT / QA only)
 7. frontend.md (Frontend / UI tasks only)
 8. desktop.md (STRICT / Desktop Apps only)
+9. mobile.md (STRICT / Mobile Apps only)
 
 GLOBAL PRINCIPLES:
 - Focus strictly on the user's task

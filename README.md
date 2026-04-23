@@ -27,6 +27,7 @@ The framework is divided into 8 atomic markdown files, orchestrated by a central
 ### 4. Platform-Specific
 * **`frontend.md`** - Mandates Tailwind CSS, Custom UI components, Mobile-First responsiveness, and mandatory i18n localization.
 * **`desktop.md`** - Governs cross-platform compatibility, centralized binary sidecar storage, dynamic OS-aware path resolution, and responsive desktop windows.
+* **`mobile.md`** - Governs cross-platform mobile frameworks, native UX/gestures, memory optimization, offline-first states, and Just-In-Time permissions.
 * **`database.md`** - Optimizes database querying, index usage, cardinality, and strict avoidance of N+1 problems.
 
 ## 🚀 How to Use
