@@ -34,4 +34,4 @@
    - **Solid & Latest:** Always use the latest STABLE version of a library. Avoid beta/release candidates unless specifically requested.
    - **Security Audit:** Before installation, ensure the library is well-maintained and has no known critical vulnerabilities.
    - **Explicit Versioning:** When adding dependencies, use **Exact Version Numbers** (e.g., `1.2.3`) instead of ranges (e.g., `^1.2.3` or `~1.2.3`) to prevent unexpected breaking changes during future installs.
-
+   - **No Redundancy:** STRICTLY FORBIDDEN to install new libraries that overlap in functionality with existing ones. Always audit `package.json` first and utilize existing project tools before suggesting new dependencies.
