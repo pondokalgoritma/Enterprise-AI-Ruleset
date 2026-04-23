@@ -3,7 +3,10 @@
 1. ATOMIC & REUSABLE CUSTOM COMPONENTS:
    - **STRICTLY FORBIDDEN** to use native browser popups (`alert()`, `confirm()`, `prompt()`) or generic, unstyled native HTML elements (e.g., raw `<button>`, `<input>`, `<select>`) directly in views.
    - **Custom UI Library:** All UI elements MUST be abstracted into a dedicated, centralized component folder (e.g., `src/components/ui`).
+   - **Headless Logic:** For complex accessible interactions (e.g., Modals, Dropdowns), the use of **Headless UI** or **Radix Primitives** is HIGHLY RECOMMENDED to ensure robust logic and A11y.
+   - **100% Custom Styling:** Regardless of the underlying logic library, the visual appearance MUST be 100% custom-styled using project-specific design tokens and Tailwind CSS. STRICTLY FORBIDDEN to use pre-styled UI kits (e.g., MUI, Chakra UI, Ant Design).
    - **Reusability & Consistency:** Every UI element must be highly reusable, modular, and strictly follow a uniform design language (consistent typography, padding, borders, and shadows) throughout the entire application.
+
 
 
 2. ACCESSIBILITY (A11Y) & UX:
