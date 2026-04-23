@@ -7,12 +7,10 @@
    - **100% Custom Styling:** Regardless of the underlying logic library, the visual appearance MUST be 100% custom-styled using project-specific design tokens and Tailwind CSS. STRICTLY FORBIDDEN to use pre-styled UI kits (e.g., MUI, Chakra UI, Ant Design).
    - **Reusability & Consistency:** Every UI element must be highly reusable, modular, and strictly follow a uniform design language (consistent typography, padding, borders, and shadows) throughout the entire application.
 
-
 2. ACCESSIBILITY (A11Y) & UX:
    - **Resilience (Error Boundaries):** Every major UI module (e.g., Sidebar, Main Layout, Dashboard Widgets) MUST be wrapped in an **Error Boundary** to prevent a single component failure from crashing the entire application.
    - Custom modals must support keyboard navigation (e.g., ESC to close, focus traps).
    - Transition animations must be smooth but efficient to avoid rendering performance issues.
-
 
 3. INTERNATIONALIZATION (i18n):
    - STRICTLY FORBIDDEN to hardcode text strings directly in components/views (including placeholders, labels, error messages).
@@ -31,7 +29,6 @@
    - **Subtle Border Radii:** Avoid excessive rounding (e.g., `rounded-2xl`, `rounded-full`) for main UI components like Cards, Inputs, and Modals. Use subtle, sharp-but-elegant radii (e.g., `rounded-md` or `rounded-lg`) to maintain a professional, high-end aesthetic.
    - STRICTLY FORBIDDEN to write custom raw CSS files unless dealing with complex, highly specific animations or edge cases that Tailwind cannot handle natively.
    - Utilize Tailwind's built-in responsive utility classes (e.g., `sm:`, `md:`, `lg:`) to easily implement the Mobile-First approach.
-
 
 6. DUAL THEME SUPPORT (DARK/LIGHT):
    - **Theme-Aware Components:** EVERY custom component MUST be fully responsive to theme changes.
@@ -86,16 +83,11 @@
    - **Organic Animations:** Implement **Spring Physics** (e.g., Framer Motion spring) for transitions and hover effects to make the UI feel alive and responsive.
    - **Glow Borders & Soft Gradients:** Apply very subtle gradients and high-contrast "glow" borders (0.5px to 1px) to UI cards and containers for a sleek, modern finish.
 
-
-
-
-
 16. SEO & SEARCH ENGINE OPTIMIZATION (CONTEXT-DEPENDENT):
-   - **Applicability:** The following SEO rules (Metadata, JSON-LD, Social Tags) ONLY apply to **Public-Facing** projects. For internal tools, dashboards, or private applications, these may be skipped to avoid unnecessary bloat.
+   - **Applicability:** The following SEO rules (Metadata, JSON-LD, Social Tags) ONLY apply to **Public-Facing Web** projects. For internal tools, dashboards, private applications, and **Desktop applications**, these MUST be skipped to avoid unnecessary bloat.
    - **Semantic HTML (Always Mandatory):** Regardless of the project type (Public or Private), AI MUST use appropriate semantic tags (<header>, <main>, <footer>, <nav>, <article>, <section>). This is mandatory for **Accessibility (A11y)** and browser consistency even when SEO is not required.
    - **Public-Facing Metadata:** For public projects, every unique view MUST have its own unique <title> (max 60 chars) and <meta name="description"> (max 160 chars).
    - **Heading Hierarchy:** AI MUST ensure only **ONE** <h1> exists per page, following a logical hierarchy (H1 -> H2 -> H3) without skipping levels.
    - **OpenGraph & Alt-Text:** Public projects MUST include OpenGraph tags. All projects MUST use descriptive alt attributes for images (essential for A11y).
    - **Structured Data (JSON-LD):** Public projects MUST include JSON-LD for rich snippets where applicable.
-   - **Visual Stability (CLS Prevention):** Every image MUST have explicit width and height to prevent Layout Shifts, ensuring a premium UX regardless of project type.
 
