@@ -37,3 +37,8 @@
 8. USER FEEDBACK & LAYERING:
    - **Loading & Empty States:** Every data-fetching component MUST handle and display a distinct "Loading" state and an "Empty" state (when no data is returned). DILARANG (FORBIDDEN) to show blank screens during background processes.
    - **Z-Index Management:** Avoid "Z-Index Wars" (e.g., `z-[9999]`). Use a structured layering system or Tailwind's standard z-index scale.
+
+9. ADVANCED FRONTEND PATTERNS:
+   - **Race Condition Handling:** When performing multiple asynchronous requests for the same state (e.g., search-as-you-type), always use an `AbortController` to cancel previous pending requests and prevent outdated data from overwriting new results.
+   - **Debouncing & Throttling:** Rapid-fire events (input, scroll, resize) MUST be debounced or throttled to prevent performance degradation and excessive API calls.
+   - **Semantic HTML:** Strictly avoid "Div-Soup." Use appropriate semantic tags (`<nav>`, `<header>`, `<main>`, `<article>`, `<button>`, etc.) to ensure accessibility (A11y) and SEO optimization.

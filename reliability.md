@@ -31,3 +31,7 @@
 7. RESOURCE CLEANUP & EDGE CASES:
    - **Mandatory Cleanup:** Any allocated resource (subscriptions, intervals, timeouts, file handles, DB connections) MUST be explicitly closed or cleared when no longer needed to prevent memory leaks.
    - **Defensive Programming:** Never assume the "Happy Path." Always handle null/undefined values, empty arrays, and network timeouts. Implement retry logic for critical transient failures.
+
+8. STABILITY & INTEGRITY:
+   - **Idempotency & Double Submit:** For state-changing operations (Create/Update/Delete), implement UI protections (e.g., disabling buttons after the first click) and backend checks to prevent duplicate actions from multiple submissions.
+   - **Environment Validation:** Critically important environment variables (defined in `.env` or bindings) MUST be validated during application startup. The app should fail fast and log clear errors if a required secret or configuration is missing.
